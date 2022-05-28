@@ -14,7 +14,7 @@ top: 20px;}
 
 #header{
   width:100%; 
-  height:70px;
+  height:75px;
   top:0;
   left:0;
   z-index:50;
@@ -129,4 +129,88 @@ top: 20px;}
     text-decoration: none ;/* 文字有底線*/
 }
 
+#back-purple #section #floor-plan {
+	
+	width: 45%;
+  height: 100%;
 
+  background-color:#EDE6F8;
+	margin-right:0;
+	margin-down:0%;
+	margin-top:0%;
+	float: right;
+  border-top-right-radius: 30px;
+	border-bottom-right-radius:  30px;
+}
+
+
+.restroom{
+	background-color:#EDE6F8;
+	width:80%;
+	height:45%;
+	margin-right:10%;
+	margin-left:15%;
+	margin-top:2%;
+}
+
+/* #chart { */
+	/* background-color:#C9A3FA; */
+/* } */
+
+#chart .bath {
+	fill:transparent;
+	stroke:#1E5753;
+	stroke-width:0.5;
+}
+
+#chart .toliet {
+	fill:transparent;
+	stroke:#3361DE;
+	stroke-width:0.5;
+}
+
+#chart .washing {
+
+	fill:#4071F5;
+	stroke:black;
+	stroke-width:0.5;
+}
+#chart .dryer {
+	fill:transparent;
+	stroke:#D14C1A;
+	stroke-width:0.5;
+}
+
+#washing-1, #washing-2 {
+	fill:#FAF4F1;
+	stroke:transparent;
+	stroke-width:1;
+}
+
+#floor-plan h1 {
+	  font-family:  "微軟正黑體";
+		width:80%;
+		height:4.5%;
+    font-size: 24px;
+		color: white;
+		text-align: center;
+		background-color: #5955b3;
+		margin-right:10%;
+		margin-left:10%;
+		border-radius:30px;
+		margin-top:2%;
+}
+
+#floor-plan p {
+	  font-family:  "微軟正黑體";
+		width:80%;
+		height:6%;
+    font-size: 24px;
+		color: white;
+		text-align: center;
+		background-color: #A499AC;
+		margin-right:10%;
+		margin-left:10%;
+		border-radius:30px;
+		margin-top:5%;
+}
