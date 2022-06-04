@@ -70,7 +70,7 @@ top: 20px;}
   background-color: #5955b3;
   margin-right:5%;
   margin-left:5%;	
-	margin-top:2%;
+	margin-top:0.75%;
 	margin-bottom:2%;
 
   border-radius:30px;
@@ -83,7 +83,7 @@ top: 20px;}
 
   background-color: #5955b3;
 	margin-left:0.75%;
-	margin-down:0.75%;
+
 	margin-top:0.75%;
 
   float: left;
@@ -97,7 +97,7 @@ top: 20px;}
 
   background-color: white;
 	margin-right:0.75%;
-	margin-down:0.75%;
+
 	margin-top:0.75%;
 
   float: left;
@@ -136,7 +136,6 @@ top: 20px;}
 
   background-color:#EDE6F8;
 	margin-right:0;
-	margin-down:0%;
 	margin-top:0%;
 	float: right;
   border-top-right-radius: 30px;
@@ -153,9 +152,6 @@ top: 20px;}
 	margin-top:2%;
 }
 
-/* #chart { */
-	/* background-color:#C9A3FA; */
-/* } */
 
 #chart .bath {
 	fill:transparent;
@@ -163,10 +159,18 @@ top: 20px;}
 	stroke-width:0.5;
 }
 
+.shower:hover {
+	opacity:1;
+}
+
 #chart .toliet {
 	fill:transparent;
 	stroke:#3361DE;
 	stroke-width:0.5;
+}
+
+#chart .disabled:hover {
+	opacity:0.7;
 }
 
 #chart .washing {
@@ -178,19 +182,45 @@ top: 20px;}
 #chart .dryer {
 	fill:transparent;
 	stroke:#D14C1A;
-	stroke-width:0.5;
+	stroke-width:0.2;
+}
+.hot-wind {
+  
+  stroke-width: 3;
+  opacity:0.1;
+
+  animation: dash 1.4s linear infinite;
+}
+/* 烘衣機的動畫設定 */
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -10;
+    /* works, know why */
+    opacity:1;
+  }
+}
+.hot-wind:hover{  	 
+  stroke-width: 3;
+  opacity:1;
 }
 
 #washing-1, #washing-2 {
 	fill:#FAF4F1;
 	stroke:transparent;
-	stroke-width:1;
+	stroke-width:0;
+}
+
+#chart .washing:hover{     
+
+    fill: #FAF4F1;
+    pointer-events: all;
 }
 
 #floor-plan h1 {
 	  font-family:  "微軟正黑體";
 		width:80%;
-		height:4.5%;
+		height:5%;
     font-size: 24px;
 		color: white;
 		text-align: center;
@@ -201,16 +231,152 @@ top: 20px;}
 		margin-top:2%;
 }
 
-#floor-plan p {
-	  font-family:  "微軟正黑體";
+.usage { 
 		width:80%;
-		height:6%;
-    font-size: 24px;
-		color: white;
-		text-align: center;
+		height:5%;
 		background-color: #A499AC;
 		margin-right:10%;
 		margin-left:10%;
-		border-radius:30px;
 		margin-top:5%;
+		border-radius:30px;
+		font-size: 24px;
+		color: white;
+		font-family:  "微軟正黑體";
 }
+
+#wash-usage {
+	display:flex;
+	justify-content: flex-start;
+}
+
+.wash-all-box {
+	display:flex;
+	flex-basis: 45%;
+	justify-content: space-center;
+	margin-top: 0.46%;
+}
+
+.wash-box {
+	border:  solid;
+	height: 23px;
+  width: 23px;
+	border-color:#5D626F;
+	background-color: #609755;
+	border-width:2px;
+	border-radius:8px;
+	margin-left:9%;
+	margin-top: 1.13%;
+}
+
+#wash-box-1:hover {
+	background-color: #CC3014;
+}
+
+#wash-box-2:hover {
+	background-color: #CC3014;
+}
+
+#dry-usage {
+	display:flex;
+	justify-content: flex-start;
+}
+
+.dry-all-box {
+	display:flex;
+	flex-basis: 24.4%;
+	justify-content: center;
+	margin-top: 0.46%;
+}
+
+.dry-box {
+	border:  solid;
+	height: 23px;
+  width: 23px;
+	border-color:#5D626F;
+	background-color: #609755;
+	border-width:2px;
+	border-radius:8px;
+	margin-left:8%;
+	margin-top: 1.13%;
+}
+
+#dry-box-1:hover {
+	background-color: #CC3014;
+}
+
+#dis-usage {
+	display:flex;
+	justify-content: flex-start;
+}
+
+.dis-all-box {
+	display:flex;
+	flex-basis: 16%;
+	justify-content: center;
+	margin-top: 0.46%;
+}
+
+.dis-box {
+	border:  solid;
+	height: 23px;
+  width: 23px;
+	border-color:#5D626F;
+	background-color: #609755;
+	border-width:2px;
+	border-radius:8px;
+	margin-left:8%;
+	margin-top: 1.13%;
+}
+
+#dis-box-1:hover {
+	background-color: #CC3014;
+}
+
+#bath-usage {
+	display:flex;
+	justify-content: flex-start;
+}
+
+.bath-all-box {
+	display:flex;
+	flex-basis: 70%;
+	justify-content: center;
+	margin-top: 0.46%;
+}
+
+.bath-box {
+	border:  solid;
+	height: 23px;
+  width: 23px;
+	border-color:#5D626F;
+	background-color: #609755;
+	border-width:2px;
+	border-radius:8px;
+	margin-left:8%;
+	margin-top: 1.13%;
+}
+
+#bath-box-1:hover {
+	background-color: #CC3014;
+}
+
+#bath-box-2:hover {
+	background-color: #CC3014;
+}
+
+#bath-box-3:hover {
+	background-color: #CC3014;
+}
+
+#bath-box-4:hover {
+	background-color: #CC3014;
+}
+
+#bath-box-5:hover {
+	background-color: #CC3014;
+}
+
+#bath-box-6:hover {
+	background-color: #CC3014;
+}
+
